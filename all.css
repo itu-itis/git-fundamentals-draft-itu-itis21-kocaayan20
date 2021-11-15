@@ -13,6 +13,9 @@
 				background-color: lightgrey;
 				font-weight: bold;
 			}
+ul {
+    list-style: square;
+    }
 		
 ul {
     list-style: square;
