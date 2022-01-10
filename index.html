@@ -4,28 +4,17 @@
 	<head>
 		<title> My Web Page </title>
 		<link rel="stylesheet" type="text/css" href="./all.css" />
-		<!--
-		<style type="text/css">
-			h1 {
-				font-size: 24pt;
-				color: red;
-				text-decoration: underline;
-				font-family: tahoma, helvetica, sans-serif;
-			}
-			em {
-				font-style: normal;
-				color: green;
-				background-color: lightgrey;
-				font-weight: bold;
-			}
-		</style>
-		-->
+		
 	</head>
-	<body>
+	<body> 
+	<body onload="document.body.style.backgroundColor='pink'; sayHello()"
+		  onresize="document.body.style.backgroundColor='lightblue'"
+		  onkeydown="document.body.style.backgroundColor='white'"
+		  onkeyup="document.body.style.backgroundColor='lightyellow'"> 
 		<p>
 			<strong> Introduction to Information Systems </strong>
 		</p>
-		<p class = "centered">
+		 <p class="centered" onmouseover='document.querySelector(".centered").style.font="bold 20pt arial, serif"'>
 			<em>
 			Adnan Ege Kocaayan
 			<br>
@@ -33,18 +22,20 @@
 			</em>
 		</p>
 		<p> Evolution of Homo species </p>
-		<ul>
+		<ul id='ul-01' onmouseover="document.getElementById('ul-01').style.backgroundColor='purple'">
 			<li> Homo habilis (able man) </li>
 			<li> Homo erectus (upright man) </li)
 			<li> Homo neanderthalensis </li>
 			<li> Homo floresiensis (hobbit) </li>
 			<li> Homo sapiens (wise man) </li>
-			<ul>
+			<ul id='ul-02' onclick="document.getElementById('ul-02').style.backgroundColor='orange'">
 				<li> Homo sapiens sapiens </li>
 			<ul>
 		</ul>
-		<h1> <strong> Human Evolution </strong> </h1>
-		<p> <img src="evolution-diagram.png"> </p>
+		<h1 onmouseover="style.color='orange'; style.backgroundColor='lightgreen'"
+		onmouseout='style.backgroundColor="white"; style.color="red" '> 
+		<strong> Human Evolution </strong> </h1>
+		<p> <img src='evolution-diagram.png'> </p>
 		<p> You can find the link of the image below.
 			<a href="https://www.biologyonline.com/dictionary/homo-sapiens-sapiens">
 				Biology online
@@ -53,7 +44,9 @@
 		<h2> <strong> The Clickable Image </strong> </h2>
 		<p> This image is clickable, click on it and try.
 			<a href="https://www.biologyonline.com/dictionary/homo-sapiens-sapiens"> 
-				<img src="evolution-diagram.png"> 
+				<img id='img-01' alt='You are about the leave our web page.' 
+			onclick='alert(document.getElementById("img-01").alt)'
+			src="evolution-diagram.png">
 			</a>
 		</p>
 		<table>
@@ -87,5 +80,10 @@
 					lemurs,
 					monkeys.
 		</pre>
+		<script>
+		function sayHello() {
+			alert("Welcome aboard!");
+		}
+		</script>
 	</body>
 <html>
